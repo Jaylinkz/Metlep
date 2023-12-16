@@ -4216,7 +4216,7 @@
                 class="h-170px] relative z-10 mx-auto mb-6 w-[170px] rounded-full"
               >
                 <img
-                  src="assets/images/team/team-03.png"
+                  src="assets/images/hero/IMG_E2008.JPG"
                   alt="image"
                   class="w-full rounded-full"
                 />
@@ -5318,7 +5318,7 @@
                 <div class="mb-0">
                   <button
                     type="submit"
-                    class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-dark"
+                    class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-dark SendEmail"
                   >
                     Send Message
                   </button>
@@ -5987,6 +5987,17 @@
       }
 
       window.document.addEventListener("scroll", onScroll);
+      $(function () {
+      $('.SendEmail').click(function (event) {
+        event.preventDefault();
+        var email = 'jurbejohnson@gmail.com';
+        var subject = 'Test';
+        var emailBody = 'Hi Sample,';
+        var attach = 'path';
+        document.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody+
+            "?attach="+attach;
+      });
+    });
     </script>
   </body>
 </html>
